@@ -1,8 +1,13 @@
 const http = require('http');
+const url = require('url');
 
-const start = () => {
+const start = (route, handle) => {
     http.createServer((request, response) => {
-        console.log('request received');
+        const pathName = url.parse(request.url).pathname;
+        console.log(`request for ${pathName} received`);
+
+        route(handle, pathName);
+
         response.writeHead(200, {
             "Content-type": "text-plain"
         });
