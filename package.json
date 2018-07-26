@@ -1,0 +1,24 @@
+{
+  "name": "node-primary",
+  "version": "1.0.0",
+  "description": "node入门",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Luxy666/node-primary.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Luxy666/node-primary/issues"
+  },
+  "homepage": "https://github.com/Luxy666/node-primary#readme",
+  "dependencies": {
+    "formidable": "^1.2.1"
+  }
+}
