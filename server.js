@@ -6,12 +6,12 @@ const start = (route, handle) => {
         const pathName = url.parse(request.url).pathname;
         console.log(`request for ${pathName} received`);
 
-        route(handle, pathName);
+        const content = route(handle, pathName);
 
         response.writeHead(200, {
             "Content-type": "text-plain"
         });
-        response.write("Hello World!");
+        response.write(content);
         response.end();
     }).listen(8000);
 
